@@ -152,11 +152,17 @@ while ($true)
         if ($evt.id -eq 17) {
             $output = @{}
             $output.add("Type", "Pipe Created")
+            $output.add("Image", $evt.Image)
+            $output.add("PipeName", $evt.PipeName)
+            $output.add("User", $evt.User)
             write-alert $output
         }
         if ($evt.id -eq 18) {
             $output = @{}
             $output.add("Type", "Pipe Connected")
+            $output.add("Image", $evt.Image)
+            $output.add("PipeName", $evt.PipeName)
+            $output.add("User", $evt.User)
             write-alert $output
         }
         if ($evt.id -eq 19) {
